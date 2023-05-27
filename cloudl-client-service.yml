@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: cloudl-client-service
 spec:
+  selector:
+      app: cloudl-client
   ports:
     - port: 80
       protocol: TCP
       targetPort: http-port
-  selector:
-    app: cloudl-client
-  type: LoadBalancer
+  
+  
